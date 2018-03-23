@@ -3,7 +3,7 @@
 #
 
 FROM resin/rpi-raspbian
-MAINTAINER Zhiwei Feng 1/26 2018
+MAINTAINER Zhiwei Feng 3/23 2018
 
 RUN     apt-get update -y \
 # Ubuntu Config
@@ -15,7 +15,7 @@ RUN     apt-get update -y \
 # Required python packages
         && sudo -H pip install --upgrade pip \
         && sudo pip install numpy toml \
-        && sudo -H pip install pandas jinja2 pyserial pyulog 
+        && sudo -H pip install pandas jinja2 pyserial pyulog \
 
 # Install FastRTPS 1.5.0 and FastCDR-1.0.7
 RUN cd ~ \
